@@ -16,11 +16,11 @@ services:
     image: hashicorp/terraform:1.9.8
     working_dir: /workspace
     volumes:
-      - ./infrastructure:/workspace
+      - ./part1_infrastructure:/workspace
 
   # Python with the pipeline code. Used by `make seed`, `make pipeline` and `make test`.
   pipeline:
-    build: ./pipeline
+    build: ./part2_pipeline
     environment:
       AWS_ENDPOINT_URL: http://localstack:4566 # containers reach LocalStack by its service name
       AWS_ACCESS_KEY_ID: test

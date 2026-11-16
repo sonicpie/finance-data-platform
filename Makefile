@@ -34,4 +34,4 @@ test:
 # Stop everything and delete local Terraform state.
 down:
 	docker compose down -v --remove-orphans
-	rm -rf infrastructure/.terraform infrastructure/terraform.tfstate*
+	rm -rf part1_infrastructure/.terraform part1_infrastructure/terraform.tfstate*
