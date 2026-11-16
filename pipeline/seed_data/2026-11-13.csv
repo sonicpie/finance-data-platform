@@ -1,0 +1,11 @@
+transaction_id,transaction_date,merchant,category,amount
+TXN-1001,2026-11-13,FreshMart,groceries,54.20
+TXN-1002,2026-11-13,Green Grocer,groceries,23.75
+TXN-1003,2026-11-13,SkyAir,travel,310.00
+TXN-1004,2026-11-13,CityCab,travel,18.50
+TXN-1005,2026-11-13,Bean Cafe,dining,7.80
+TXN-1006,2026-11-13,Noodle House,dining,32.40
+TXN-1007,2026-11-13,FibreNet,utilities,60.00
+TXN-1008,2026-11-13,Desk Depot,office,129.99
+TXN-1009,2026-11-13,Bean Cafe,dining,-42.50
+,2026-11-13,FreshMart,groceries,15.00

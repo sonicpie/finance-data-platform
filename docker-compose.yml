@@ -1,0 +1,28 @@
+services:
+  # A fake AWS that runs locally. Pinned: newer versions need a sign-up token.
+  localstack:
+    image: localstack/localstack:4.14
+    ports:
+      - "127.0.0.1:4566:4566"
+    environment:
+      SERVICES: s3,iam,sts
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:4566/_localstack/health"]
+      interval: 2s
+      retries: 30
+
+  # Terraform in a container, so it doesn't need installing. Used by `make infra` and `make lint`.
+  terraform:
+    image: hashicorp/terraform:1.9.8
+    working_dir: /workspace
+    volumes:
+      - ./infrastructure:/workspace
+
+  # Python with the pipeline code. Used by `make seed`, `make pipeline` and `make test`.
+  pipeline:
+    build: ./pipeline
+    environment:
+      AWS_ENDPOINT_URL: http://localstack:4566 # containers reach LocalStack by its service name
+      AWS_ACCESS_KEY_ID: test
+      AWS_SECRET_ACCESS_KEY: test
+      AWS_DEFAULT_REGION: us-east-1

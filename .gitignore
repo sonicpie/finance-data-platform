@@ -1,0 +1,11 @@
+# terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# python
+__pycache__/
+.pytest_cache/
+
+# misc
+.DS_Store
