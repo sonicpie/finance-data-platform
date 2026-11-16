@@ -1,0 +1,10 @@
+transaction_id,transaction_date,merchant,category,amount
+TXN-2001,2026-11-14,FreshMart,groceries,41.10
+TXN-2002,2026-11-14,Corner Store,groceries,9.95
+TXN-2003,2026-11-14,MetroRail,travel,12.00
+TXN-2004,2026-11-14,Grill & Co,dining,88.00
+TXN-2005,2026-11-14,Bean Cafe,dining,6.50
+TXN-2006,2026-11-14,AquaWater,utilities,35.25
+TXN-2007,2026-11-14,PaperWorks,office,19.99
+TXN-2008,2026-11-13,CityCab,travel,22.00
+TXN-1001,2026-11-13,FreshMart,groceries,64.20
