@@ -100,7 +100,7 @@ def write_curated(con):
                 COUNT(*) AS transaction_count
             FROM checked
             WHERE rejection_reason IS NULL
-            GROUP BY transaction_date, category
+            GROUP BY CAST(transaction_date AS DATE), category
         )
         TO 's3://{CURATED_BUCKET}/{CURATED_FOLDER}' (FORMAT parquet, PARTITION_BY (transaction_date))
     """)
